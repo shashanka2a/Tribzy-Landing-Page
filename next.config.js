@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  // Remove 'output: export' for development
   trailingSlash: true,
   images: {
     unoptimized: true,
@@ -10,6 +10,14 @@ const nextConfig = {
   },
   typescript: {
     ignoreBuildErrors: true,
+  },
+  // Configure for Replit environment
+  experimental: {
+    allowedHosts: true,
+  },
+  // Allow all hosts for development
+  async rewrites() {
+    return []
   },
 }
 
