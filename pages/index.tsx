@@ -112,7 +112,297 @@ export default function Home() {
       </Head>
       
       <div className="min-h-screen bg-white">
-        <h1>Welcome to Tribzy</h1>
+        {/* Header */}
+        <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/95 backdrop-blur">
+          <div className="container mx-auto flex h-16 items-center justify-between px-6">
+            <div className="flex items-center space-x-3">
+              <div className="flex items-center justify-center w-9 h-9 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl">
+                <span className="text-white font-bold text-lg">T</span>
+              </div>
+              <span className="text-2xl font-bold tracking-tight" style={{fontFamily: 'Space Grotesk'}}>Tribzy</span>
+            </div>
+            
+            {/* Desktop Nav */}
+            <nav className="hidden md:flex items-center space-x-6">
+              <Button variant="outline" size="sm" className="border-gray-300 hover:border-blue-600 hover:text-blue-600">
+                Sign In
+              </Button>
+              <Button size="sm" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold">
+                Get Started
+              </Button>
+            </nav>
+
+            {/* Mobile Menu */}
+            <button
+              className="md:hidden p-2"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
+
+          {isMenuOpen && (
+            <div className="md:hidden border-t bg-white">
+            <nav className="container mx-auto px-6 py-4 space-y-3">
+              <Button variant="outline" size="sm" className="w-full">Sign In</Button>
+              <Button size="sm" className="w-full bg-gradient-to-r from-blue-600 to-purple-600">
+                Get Started
+              </Button>
+            </nav>
+            </div>
+          )}
+        </header>
+
+        {/* Hero Section */}
+        <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+          {/* Animated Background Elements */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-pink-400/20 to-orange-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-yellow-400/10 to-red-400/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+          </div>
+
+          {/* Floating Icons */}
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute top-20 left-10 animate-bounce delay-300">
+              <PartyPopper className="h-8 w-8 text-blue-400/60" />
+            </div>
+            <div className="absolute top-32 right-20 animate-bounce delay-700">
+              <Music className="h-6 w-6 text-purple-400/60" />
+            </div>
+            <div className="absolute bottom-40 left-20 animate-bounce delay-1000">
+              <Star className="h-7 w-7 text-pink-400/60" />
+            </div>
+            <div className="absolute bottom-20 right-10 animate-bounce delay-500">
+              <Sparkles className="h-6 w-6 text-orange-400/60" />
+            </div>
+          </div>
+
+          <div className="container mx-auto px-6 py-20 md:py-28 relative z-10">
+            <div className="max-w-5xl mx-auto text-center">
+              <Badge className="mb-8 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 text-sm font-bold shadow-lg">
+                🎓 College Students Only
+              </Badge>
+              
+              <h1 className="text-6xl md:text-7xl lg:text-8xl mb-8 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent leading-tight tracking-tight font-black" style={{fontFamily: 'Space Grotesk'}}>
+                Your Campus Events,<br />
+                <span className="text-5xl md:text-6xl lg:text-7xl">All in One Place</span>
+              </h1>
+              
+              <p className="text-2xl md:text-3xl text-gray-700 mb-12 max-w-4xl mx-auto leading-relaxed font-medium">
+                Discover parties, study groups, club meetings, and more. Connect with your campus community through verified student-only events.
+              </p>
+
+              {/* Enhanced .edu Email Signup */}
+              <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-10 shadow-2xl max-w-lg mx-auto mb-12 border border-white/20">
+                <div className="flex items-center justify-center mb-6">
+                  <div className="p-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl mr-4">
+                    <GraduationCap className="h-8 w-8 text-white" />
+                  </div>
+                  <span className="text-xl font-bold text-gray-800">Sign up with your .edu email</span>
+                </div>
+                <div className="flex flex-col space-y-4">
+                  <Input
+                    type="email"
+                    placeholder="your.name@university.edu"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="text-center text-lg py-4 rounded-2xl border-2 border-gray-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/20 transition-all duration-300"
+                  />
+                  <Button 
+                    size="lg" 
+                    className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 text-lg"
+                  >
+                    Join Tribzy
+                    <ArrowRight className="ml-3 h-6 w-6" />
+                  </Button>
+                </div>
+                <p className="text-sm text-gray-500 mt-4 font-medium">Only verified .edu email addresses accepted</p>
+              </div>
+
+              <div className="flex flex-wrap justify-center items-center gap-8 text-gray-700">
+                <div className="flex items-center space-x-3 bg-white/60 backdrop-blur-sm px-6 py-3 rounded-full">
+                  <Users className="h-6 w-6 text-blue-600" />
+                  <span className="font-bold text-lg">500+ events monthly</span>
+                </div>
+                <div className="flex items-center space-x-3 bg-white/60 backdrop-blur-sm px-6 py-3 rounded-full">
+                  <Shield className="h-6 w-6 text-purple-600" />
+                  <span className="font-bold text-lg">Student-verified</span>
+                </div>
+                <div className="flex items-center space-x-3 bg-white/60 backdrop-blur-sm px-6 py-3 rounded-full">
+                  <Heart className="h-6 w-6 text-pink-600" />
+                  <span className="font-bold text-lg">Campus community</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Key Features */}
+        <section className="py-24 bg-gradient-to-br from-gray-50 to-blue-50">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-20">
+              <h2 className="text-5xl md:text-6xl mb-8 text-gray-900 font-black" style={{fontFamily: 'Space Grotesk'}}>
+                Campus Events Made Simple
+              </h2>
+              <p className="text-gray-700 text-xl max-w-3xl mx-auto font-medium">
+                Everything you need to discover and create amazing campus experiences
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+              {keyFeatures.map((feature, index) => (
+                <Card key={feature.title} className="text-center p-10 hover:shadow-2xl hover:scale-105 transition-all duration-500 border-0 shadow-xl rounded-3xl bg-white/80 backdrop-blur-sm group">
+                  <CardContent className="p-0">
+                    <div className={`w-20 h-20 ${feature.color} rounded-3xl mx-auto mb-8 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                      <feature.icon className="h-10 w-10 text-white" />
+                    </div>
+                    <h3 className="text-3xl mb-6 font-black text-gray-900" style={{fontFamily: 'Space Grotesk'}}>
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-700 leading-relaxed text-lg font-medium">
+                      {feature.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Event Preview Grid */}
+        <section className="py-24 bg-gradient-to-br from-white to-gray-50">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-20">
+              <h2 className="text-5xl md:text-6xl mb-8 text-gray-900 font-black" style={{fontFamily: 'Space Grotesk'}}>
+                Happening This Week
+              </h2>
+              <p className="text-gray-700 text-xl font-medium">
+                See what's trending on campus right now
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {featuredEvents.map((event) => (
+                <Card key={event.id} className="group hover:shadow-2xl hover:scale-105 transition-all duration-500 overflow-hidden border-0 shadow-xl rounded-3xl bg-white/90 backdrop-blur-sm">
+                  <div className="relative overflow-hidden">
+                    <ImageWithFallback
+                      src={event.image}
+                      alt={event.title}
+                      className="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <Badge className={`absolute top-4 right-4 ${getCategoryColor(event.category)} text-white font-bold px-4 py-2 text-sm shadow-lg`}>
+                      {event.category}
+                    </Badge>
+                  </div>
+                  <CardHeader className="p-6">
+                    <CardTitle className="text-xl mb-4 font-black" style={{fontFamily: 'Space Grotesk'}}>
+                      {event.title}
+                    </CardTitle>
+                    <div className="space-y-3">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-2 bg-blue-50 px-3 py-2 rounded-full">
+                          <Calendar className="h-5 w-5 text-blue-600" />
+                          <span className="font-bold text-blue-800">{event.date}</span>
+                        </div>
+                        <div className="flex items-center space-x-2 bg-green-50 px-3 py-2 rounded-full">
+                          <Users className="h-5 w-5 text-green-600" />
+                          <span className="font-bold text-green-800">{event.attendees}</span>
+                        </div>
+                      </div>
+                      <div className="flex items-center space-x-2 text-gray-700">
+                        <MapPin className="h-5 w-5 text-gray-500" />
+                        <span className="font-medium">{event.location}</span>
+                      </div>
+                    </div>
+                  </CardHeader>
+                </Card>
+              ))}
+            </div>
+            
+            <div className="text-center mt-16">
+              <Button size="lg" variant="outline" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-bold px-10 py-4 rounded-2xl text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                View All Events
+                <ArrowRight className="ml-3 h-6 w-6" />
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* Footer */}
+        <footer className="bg-gray-900 text-white py-16">
+          <div className="container mx-auto px-6">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+              {/* Brand */}
+              <div className="md:col-span-1">
+                <div className="flex items-center space-x-3 mb-6">
+                  <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl">
+                    <span className="text-white font-bold text-2xl">T</span>
+                  </div>
+                  <span className="text-3xl font-black" style={{fontFamily: 'Space Grotesk'}}>Tribzy</span>
+                </div>
+                <p className="text-gray-400 text-lg font-medium leading-relaxed">
+                  Connecting college communities through amazing campus events.
+                </p>
+              </div>
+
+              {/* Quick Links */}
+              <div>
+                <h3 className="text-xl font-bold mb-6" style={{fontFamily: 'Space Grotesk'}}>Quick Links</h3>
+                <ul className="space-y-4">
+                  <li><a href="#" className="text-gray-400 hover:text-blue-400 transition-colors text-lg font-medium">About Us</a></li>
+                  <li><a href="#" className="text-gray-400 hover:text-blue-400 transition-colors text-lg font-medium">Blog</a></li>
+                  <li><a href="#" className="text-gray-400 hover:text-blue-400 transition-colors text-lg font-medium">Partnerships</a></li>
+                  <li><a href="#" className="text-gray-400 hover:text-blue-400 transition-colors text-lg font-medium">Careers</a></li>
+                </ul>
+              </div>
+
+              {/* Support */}
+              <div>
+                <h3 className="text-xl font-bold mb-6" style={{fontFamily: 'Space Grotesk'}}>Support</h3>
+                <ul className="space-y-4">
+                  <li><a href="#" className="text-gray-400 hover:text-blue-400 transition-colors text-lg font-medium">Help Center</a></li>
+                  <li><a href="#" className="text-gray-400 hover:text-blue-400 transition-colors text-lg font-medium">Contact Us</a></li>
+                  <li><a href="#" className="text-gray-400 hover:text-blue-400 transition-colors text-lg font-medium">Privacy Policy</a></li>
+                  <li><a href="#" className="text-gray-400 hover:text-blue-400 transition-colors text-lg font-medium">Terms of Service</a></li>
+                </ul>
+              </div>
+
+              {/* Social */}
+              <div>
+                <h3 className="text-xl font-bold mb-6" style={{fontFamily: 'Space Grotesk'}}>Follow Us</h3>
+                <div className="flex space-x-4">
+                  <a href="#" className="p-3 bg-gray-800 hover:bg-blue-600 rounded-xl transition-all duration-300 group">
+                    <Instagram className="h-6 w-6 text-gray-400 group-hover:text-white" />
+                  </a>
+                  <a href="#" className="p-3 bg-gray-800 hover:bg-pink-600 rounded-xl transition-all duration-300 group">
+                    <MessageCircle className="h-6 w-6 text-gray-400 group-hover:text-white" />
+                  </a>
+                  <a href="#" className="p-3 bg-gray-800 hover:bg-purple-600 rounded-xl transition-all duration-300 group">
+                    <Music className="h-6 w-6 text-gray-400 group-hover:text-white" />
+                  </a>
+                </div>
+                <p className="text-gray-400 text-sm mt-4 font-medium">
+                  Join the conversation on social media
+                </p>
+              </div>
+            </div>
+            
+            <div className="border-t border-gray-800 pt-8">
+              <div className="flex flex-col md:flex-row items-center justify-between">
+                <p className="text-gray-400 text-lg font-medium mb-4 md:mb-0">
+                  &copy; 2024 Tribzy. Connecting college communities.
+                </p>
+                <div className="flex space-x-6 text-sm text-gray-500">
+                  <span>Made with ❤️ for students</span>
+                  <span>•</span>
+                  <span>Student-verified platform</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
       </div>
     </div>
   )
