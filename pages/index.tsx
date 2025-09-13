@@ -248,52 +248,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-              {/* Discover Campus Events */}
-              <Card className="text-center p-8 hover:shadow-xl transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm group">
-                <CardContent className="p-0">
-                  <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <Search className="h-8 w-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">
-                    Discover Campus Events
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Find study groups, parties, workshops, and more happening at your school
-                  </p>
-                </CardContent>
-              </Card>
-
-              {/* Student-Only Access */}
-              <Card className="text-center p-8 hover:shadow-xl transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm group">
-                <CardContent className="p-0">
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <Shield className="h-8 w-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">
-                    Student-Only Access
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Safe, verified community - only students with .edu emails can join
-                  </p>
-                </CardContent>
-              </Card>
-
-              {/* Host & Promote Events */}
-              <Card className="text-center p-8 hover:shadow-xl transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm group">
-                <CardContent className="p-0">
-                  <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-violet-500 rounded-2xl mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <Zap className="h-8 w-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">
-                    Host & Promote Events
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Create and share your events to reach students across campus
-                  </p>
-                </CardContent>
-              </Card>
-
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               {/* Verified College-Only Events */}
               <Card className="text-center p-8 hover:shadow-xl transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm group">
                 <CardContent className="p-0">
