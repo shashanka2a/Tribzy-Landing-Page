@@ -323,6 +323,72 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Why Tribzy Section */}
+        <section className="py-20 bg-gradient-to-br from-indigo-50/30 via-white to-purple-50/30">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-4xl md:text-5xl mb-6 font-bold text-gray-900">
+                Why Tribzy over Eventbrite or Luma?
+              </h2>
+              <p className="text-xl md:text-2xl text-gray-600 mb-16 font-medium">
+                Because it's built for students, not promoters.
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                {/* Verified College-Only Events */}
+                <div className="flex flex-col items-center text-center p-6">
+                  <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-2xl mx-auto mb-6 flex items-center justify-center shadow-lg">
+                    <Shield className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">
+                    Verified College-Only Events
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    Hosted by .edu verified students—no random promoters or commercial spam cluttering your feed.
+                  </p>
+                </div>
+
+                {/* Dedicated Campus Calendar */}
+                <div className="flex flex-col items-center text-center p-6">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl mx-auto mb-6 flex items-center justify-center shadow-lg">
+                    <Calendar className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">
+                    Dedicated Campus Calendar
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    Curated specifically for your school—see what's actually happening on your campus.
+                  </p>
+                </div>
+
+                {/* Student-First Experience */}
+                <div className="flex flex-col items-center text-center p-6">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl mx-auto mb-6 flex items-center justify-center shadow-lg">
+                    <Users className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">
+                    Noise-Free, Student-First
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    No random commercial events—just authentic campus experiences by and for students.
+                  </p>
+                </div>
+              </div>
+
+              {/* CTA Button */}
+              <div className="text-center">
+                <Button 
+                  size="lg" 
+                  className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-10 py-4 text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+                >
+                  Discover Campus Events
+                  <ArrowRight className="ml-3 h-6 w-6" />
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Footer */}
         <footer className="bg-gradient-to-br from-slate-50 via-indigo-50 to-purple-50 border-t border-indigo-100 py-16">
           <div className="container mx-auto px-6">
