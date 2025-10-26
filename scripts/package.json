@@ -1,0 +1,29 @@
+{
+  "name": "uf-events-fetcher",
+  "version": "1.0.0",
+  "description": "Script to fetch events happening at University of Florida in Gainesville, FL",
+  "main": "uf-events-fetcher.ts",
+  "scripts": {
+    "fetch-events": "ts-node uf-events-fetcher.ts",
+    "build": "tsc uf-events-fetcher.ts",
+    "start": "node uf-events-fetcher.js"
+  },
+  "keywords": [
+    "uf",
+    "gainesville",
+    "events",
+    "university of florida",
+    "scraper"
+  ],
+  "author": "Tribzy Team",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "cheerio": "^1.0.0-rc.12"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.0"
+  }
+}

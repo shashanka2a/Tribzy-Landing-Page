@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -89,6 +90,7 @@ const keyFeatures = [
 ]
 
 export default function Home() {
+  const router = useRouter()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [email, setEmail] = useState("")
 
@@ -125,16 +127,27 @@ export default function Home() {
             
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-4">
-              <Button variant="ghost" className="text-gray-600 hover:text-indigo-600 hover:bg-indigo-50">
+              <Button 
+                variant="ghost" 
+                className="text-gray-600 hover:text-indigo-600 hover:bg-indigo-50"
+                onClick={() => router.push('/events')}
+              >
                 Events
               </Button>
               <Button variant="ghost" className="text-gray-600 hover:text-indigo-600 hover:bg-indigo-50">
                 About
               </Button>
-              <Button variant="outline" className="border-indigo-200 text-indigo-600 hover:bg-indigo-50">
+              <Button 
+                variant="outline" 
+                className="border-indigo-200 text-indigo-600 hover:bg-indigo-50"
+                onClick={() => router.push('/auth/signin')}
+              >
                 Sign In
               </Button>
-              <Button className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white shadow-lg">
+              <Button 
+                className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white shadow-lg"
+                onClick={() => router.push('/auth/signup')}
+              >
                 Get Started
               </Button>
             </nav>
@@ -152,10 +165,25 @@ export default function Home() {
           {isMenuOpen && (
             <div className="md:hidden border-t border-white/20 bg-white/95 backdrop-blur-xl">
               <nav className="container mx-auto px-6 py-4 space-y-2">
-                <Button variant="ghost" className="w-full justify-start text-gray-600">Events</Button>
+                <Button 
+                  variant="ghost" 
+                  className="w-full justify-start text-gray-600"
+                  onClick={() => router.push('/events')}
+                >
+                  Events
+                </Button>
                 <Button variant="ghost" className="w-full justify-start text-gray-600">About</Button>
-                <Button variant="outline" className="w-full border-indigo-200 text-indigo-600">Sign In</Button>
-                <Button className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
+                <Button 
+                  variant="outline" 
+                  className="w-full border-indigo-200 text-indigo-600"
+                  onClick={() => router.push('/auth/signin')}
+                >
+                  Sign In
+                </Button>
+                <Button 
+                  className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white"
+                  onClick={() => router.push('/auth/signup')}
+                >
                   Get Started
                 </Button>
               </nav>
@@ -206,6 +234,7 @@ export default function Home() {
                   />
                   <Button 
                     className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white py-3 shadow-xl"
+                    onClick={() => router.push('/auth/signup')}
                   >
                     Join Tribzy
                     <ArrowRight className="ml-2 h-5 w-5" />
@@ -300,6 +329,7 @@ export default function Home() {
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-10 py-4 text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+                onClick={() => router.push('/events')}
               >
                 Discover Campus Events
                 <ArrowRight className="ml-3 h-6 w-6" />
@@ -359,7 +389,11 @@ export default function Home() {
             </div>
             
             <div className="text-center mt-12">
-              <Button variant="outline" className="border-indigo-300 text-indigo-600 hover:bg-indigo-50 px-8 py-3 shadow-lg">
+              <Button 
+                variant="outline" 
+                className="border-indigo-300 text-indigo-600 hover:bg-indigo-50 px-8 py-3 shadow-lg"
+                onClick={() => router.push('/events')}
+              >
                 View All Events
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>

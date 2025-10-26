@@ -1,0 +1,227 @@
+{
+  "generated": "2025-10-26T11:23:47.780Z",
+  "targetDate": "2025-10-27T00:00:00.000Z",
+  "totalEvents": 10,
+  "events": [
+    {
+      "id": "uf-001",
+      "title": "UF Homecoming Week Kickoff",
+      "description": "Join us for the start of UF Homecoming Week with food trucks, live music, and Gator spirit activities.",
+      "date": "2025-10-27",
+      "time": "6:00 PM",
+      "location": "Turlington Plaza",
+      "category": "Social",
+      "organizer": "UF Student Government",
+      "url": "https://calendar.ufl.edu/event/homecoming-kickoff",
+      "image": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400&h=300&fit=crop",
+      "price": "Free",
+      "attendees": 0,
+      "maxAttendees": 1000,
+      "tags": [
+        "homecoming",
+        "social",
+        "campus",
+        "free"
+      ],
+      "source": "UF Events Calendar"
+    },
+    {
+      "id": "uf-003",
+      "title": "UF Career Fair Fall 2025",
+      "description": "Connect with top employers and explore career opportunities at the largest career fair of the semester.",
+      "date": "2025-10-29",
+      "time": "10:00 AM",
+      "location": "O'Connell Center",
+      "category": "Academic",
+      "organizer": "UF Career Connections Center",
+      "url": "https://career.ufl.edu/events/career-fair-fall-2025",
+      "image": "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=400&h=300&fit=crop",
+      "price": "Free",
+      "attendees": 0,
+      "maxAttendees": 5000,
+      "tags": [
+        "career",
+        "networking",
+        "jobs",
+        "professional"
+      ],
+      "source": "UF Student Activities"
+    },
+    {
+      "id": "uf-004",
+      "title": "GatorNights: Halloween Spooktacular",
+      "description": "Join us for a spooky night of Halloween fun with haunted houses, costume contests, and treats.",
+      "date": "2025-10-31",
+      "time": "8:00 PM",
+      "location": "Reitz Union",
+      "category": "Social",
+      "organizer": "UF Student Activities",
+      "url": "https://www.ufsa.ufl.edu/events/gatornights-halloween",
+      "image": "https://images.unsplash.com/photo-1509557965043-1d0b0b4a9a0a?w=400&h=300&fit=crop",
+      "price": "Free",
+      "attendees": 0,
+      "maxAttendees": 800,
+      "tags": [
+        "halloween",
+        "gatornights",
+        "costume",
+        "social"
+      ],
+      "source": "UF Student Activities"
+    },
+    {
+      "id": "uf-002",
+      "title": "Gator Football vs Georgia Bulldogs",
+      "description": "Watch the Gators take on the Georgia Bulldogs in this highly anticipated rivalry game.",
+      "date": "2025-11-01",
+      "time": "3:30 PM",
+      "location": "Ben Hill Griffin Stadium",
+      "category": "Sports",
+      "organizer": "UF Athletics",
+      "url": "https://floridagators.com/sports/football/schedule",
+      "image": "https://images.unsplash.com/photo-1566577739112-5180d4bf9390?w=400&h=300&fit=crop",
+      "price": "$45-$150",
+      "attendees": 0,
+      "maxAttendees": 88548,
+      "tags": [
+        "football",
+        "sports",
+        "rivalry",
+        "stadium"
+      ],
+      "source": "UF Athletics"
+    },
+    {
+      "id": "uf-005",
+      "title": "UF Research Symposium",
+      "description": "Showcase undergraduate and graduate research projects across all disciplines.",
+      "date": "2025-11-05",
+      "time": "9:00 AM",
+      "location": "Reitz Union Grand Ballroom",
+      "category": "Academic",
+      "organizer": "UF Office of Research",
+      "url": "https://research.ufl.edu/events/symposium",
+      "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
+      "price": "Free",
+      "attendees": 0,
+      "maxAttendees": 300,
+      "tags": [
+        "research",
+        "academic",
+        "presentation",
+        "scholarship"
+      ],
+      "source": "UF Events Calendar"
+    },
+    {
+      "id": "uf-006",
+      "title": "Gainesville Food Truck Rally",
+      "description": "Sample delicious food from local Gainesville food trucks on campus.",
+      "date": "2025-11-08",
+      "time": "5:00 PM",
+      "location": "Plaza of the Americas",
+      "category": "Food",
+      "organizer": "UF Dining Services",
+      "url": "https://dining.ufl.edu/events/food-truck-rally",
+      "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400&h=300&fit=crop",
+      "price": "$5-$15",
+      "attendees": 0,
+      "maxAttendees": 500,
+      "tags": [
+        "food",
+        "local",
+        "trucks",
+        "campus"
+      ],
+      "source": "Gainesville Events"
+    },
+    {
+      "id": "uf-007",
+      "title": "UF Basketball Season Opener",
+      "description": "Cheer on the Gators as they tip off the 2025-26 basketball season.",
+      "date": "2025-11-12",
+      "time": "7:00 PM",
+      "location": "Exactech Arena",
+      "category": "Sports",
+      "organizer": "UF Athletics",
+      "url": "https://floridagators.com/sports/mens-basketball/schedule",
+      "image": "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=400&h=300&fit=crop",
+      "price": "$20-$75",
+      "attendees": 0,
+      "maxAttendees": 10000,
+      "tags": [
+        "basketball",
+        "sports",
+        "season-opener",
+        "gators"
+      ],
+      "source": "UF Athletics"
+    },
+    {
+      "id": "uf-008",
+      "title": "UF International Education Week",
+      "description": "Celebrate global diversity with cultural performances, food, and educational activities.",
+      "date": "2025-11-15",
+      "time": "11:00 AM",
+      "location": "Turlington Plaza",
+      "category": "Cultural",
+      "organizer": "UF International Center",
+      "url": "https://international.ufl.edu/events/education-week",
+      "image": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400&h=300&fit=crop",
+      "price": "Free",
+      "attendees": 0,
+      "maxAttendees": 1000,
+      "tags": [
+        "international",
+        "cultural",
+        "diversity",
+        "education"
+      ],
+      "source": "UF Events Calendar"
+    },
+    {
+      "id": "uf-009",
+      "title": "UF Engineering Expo 2025",
+      "description": "Annual engineering showcase featuring student projects, industry presentations, and networking opportunities.",
+      "date": "2025-11-20",
+      "time": "9:00 AM",
+      "location": "Engineering Building Complex",
+      "category": "Academic",
+      "organizer": "UF College of Engineering",
+      "url": "https://eng.ufl.edu/events/expo-2025",
+      "image": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=300&fit=crop",
+      "price": "Free",
+      "attendees": 0,
+      "maxAttendees": 2000,
+      "tags": [
+        "engineering",
+        "expo",
+        "projects",
+        "industry"
+      ],
+      "source": "UF Events Calendar"
+    },
+    {
+      "id": "uf-010",
+      "title": "Gator Volleyball vs LSU",
+      "description": "Support the Gator volleyball team as they face LSU in an exciting conference match.",
+      "date": "2025-11-22",
+      "time": "7:00 PM",
+      "location": "Exactech Arena",
+      "category": "Sports",
+      "organizer": "UF Athletics",
+      "url": "https://floridagators.com/sports/volleyball/schedule",
+      "image": "https://images.unsplash.com/photo-1594736797933-d0c29d4b8a0a?w=400&h=300&fit=crop",
+      "price": "$8-$25",
+      "attendees": 0,
+      "maxAttendees": 10000,
+      "tags": [
+        "volleyball",
+        "sports",
+        "lsu",
+        "conference"
+      ],
+      "source": "UF Athletics"
+    }
+  ]
+}
